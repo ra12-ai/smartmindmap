@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Smart Mind Map - Made by Raunaq</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.4.0/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({ startOnLoad: false });
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Mind Map - Made by Raunaq</title>
+  <link rel="stylesheet" href="styles.css" />
 
-  
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <!-- ✅ Load Mermaid v10.4.0 once -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.4.0/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: false });
+  </script>
+
+  <!-- ✅ html2canvas for PNG export -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 <body>
-  <div class="toolbar">
-    <textarea id="inputText" placeholder="Enter your text here..."></textarea>
-    <button onclick="generateMindMap()">Generate Mind Map</button>
-    <button onclick="toggleTheme()">Toggle Dark Mode</button>
-    <button onclick="downloadPNG()">📸 PNG</button>
-    <button onclick="window.print()">📄 PDF</button>
-  </div>
-  <div id="mindmap"></div>
-  <div id="summary"><h3>📝 Summary</h3><ul id="summaryList"></ul></div>
-  <footer>Made by Raunaq</footer>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.4.0/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({ startOnLoad: false });
-                        </script>
-  <script src="script.js"></script>
+  <div class="toolbar">
+    <textarea id="inputText" placeholder="Enter your text here..."></textarea>
+    <button onclick="generateMindMap()">Generate Mind Map</button>
+    <button onclick="toggleTheme()">Toggle Dark Mode</button>
+    <button onclick="downloadPNG()">📸 PNG</button>
+    <button onclick="window.print()">📄 PDF</button>
+  </div>
+
+  <div id="mindmap"></div>
+
+  <div id="summary">
+    <h3>📝 Summary</h3>
+    <ul id="summaryList"></ul>
+  </div>
+
+  <footer>Made by Raunaq</footer>
+
+  <!-- ✅ Load your logic -->
+  <script src="script.js"></script>
 </body>
 </html>
