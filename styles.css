@@ -1,37 +1,67 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  margin: 0;
-  padding: 10px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
 }
-:root {
-  --bg: #ffffff;
-  --text: #000000;
-}
-.dark {
-  --bg: #121212;
-  --text: #f0f0f0;
-}
+
 .toolbar {
-  margin-bottom: 10px;
+  padding: 1rem;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
+
 textarea {
-  width: 100%;
-  height: 100px;
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 1rem;
 }
+
 button {
-  margin: 5px;
-  padding: 8px 12px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
 }
-footer {
-  margin-top: 30px;
-  font-weight: bold;
-  text-align: center;
-}
+
 #mindmap {
-  margin-top: 20px;
+  margin: 2rem;
+  overflow-x: auto;
 }
-#summary ul {
-  margin-left: 20px;
+
+#summary {
+  margin: 2rem;
 }
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+/* 🌙 Dark mode */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark .toolbar,
+body.dark footer {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+body.dark textarea {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark button {
+  background-color: #333;
+  color: #fff;
+}
+
