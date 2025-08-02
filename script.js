@@ -1,12 +1,10 @@
-mermaid.initialize({ startOnLoad: false });
-
 function generateMindMap() {
   const input = document.getElementById("inputText").value;
   const ideas = input.split("\n").filter(Boolean);
   const tree = buildTree(ideas);
   const diagram = treeToMermaid(tree);
   document.getElementById("mindmap").innerHTML = `<pre class="mermaid">${diagram}</pre>`;
-  mermaid.init(undefined, document.querySelectorAll(".mermaid"));
+  mermaid.run(); // ✅ use this for Mermaid v10+
   updateSummary(tree);
 }
 
